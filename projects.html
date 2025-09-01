@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Proyectos — Maicol Rafael</title>
+  <meta name="description" content="Proyectos desarrollados por Maicol Nelson Rafael Rojas: software, redes y analítica.">
+  <link rel="icon" href="/mi-portafolio/assets/icon-192-DY4xGrSl.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="/mi-portafolio/assets/main-C66ID88y.js"></script>
+  <link rel="stylesheet" crossorigin href="/mi-portafolio/assets/main-Dn-EnfWa.css">
+</head>
+<body>
+  <div class="scrollbar"></div>
+
+  <header class="nav">
+    <a class="brand magnet" href="index.html">Maicol Rafael</a>
+    <nav class="menu">
+      <a class="active" href="projects.html">Proyectos</a>
+      <a href="about.html">Sobre mí</a>
+      <a href="contact.html">Contacto</a>
+      <a class="btn magnet" href="src\public\assets\CV_Maicol_Rafael.pdf" download>Descargar CV</a>
+    </nav>
+    <div class="nav-actions">
+      <button id="themeToggle" class="btn-ghost magnet">🌓</button>
+      <button id="openChat" class="btn-ghost magnet">Asistente</button>
+    </div>
+  </header>
+
+  <main data-router>
+    <section class="section">
+      <h1 class="section-title">Proyectos</h1>
+
+      <div class="filters" id="filters">
+        <button class="filter-btn active" data-tag="all">Todos</button>
+        <button class="filter-btn" data-tag="wordpress">WordPress</button>
+        <button class="filter-btn" data-tag="java">Java</button>
+        <button class="filter-btn" data-tag="flutter">Flutter</button>
+        <button class="filter-btn" data-tag="ml">ML / Data</button>
+      </div>
+
+      <div class="grid" id="projectsGrid" style="margin-top:14px">
+        <article class="card hover-glow tilt neon-border" data-tags="wordpress">
+          <div class="card-head">
+            <h3>Artesanos de Pimentel</h3>
+            <a class="link magnet" href="https://www.artesanosdepimentel.com" target="_blank">Visitar ↗</a>
+          </div>
+          <p>Plataforma multivendedor con <b>WooCommerce + Dokan</b>, pagos QR (Yape) y registro personalizado.</p>
+          <div class="tags"><span>WordPress</span><span>WooCommerce</span><span>Dokan</span></div>
+          <img class="thumb" src="public/img/proyectos/artesanos.jpg" alt="Artesanos de Pimentel">
+        </article>
+
+        <article class="card hover-glow tilt neon-border" data-tags="java">
+          <h3>Sistema Documentario (Java + PostgreSQL)</h3>
+          <p>Gestión de documentos con roles, gerencias y estados. Almacenamiento y previsualización de PDFs.</p>
+          <div class="tags"><span>Java</span><span>PostgreSQL</span><span>Swing</span></div>
+          <img class="thumb" src="public/img/proyectos/documentario.jpg" alt="Sistema Documentario">
+        </article>
+
+        <article class="card hover-glow tilt neon-border" data-tags="flutter">
+          <h3>Himnario GYD (Flutter + Firebase)</h3>
+          <p>App móvil con 424 himnos, búsqueda por número/título y audio desde Firebase.</p>
+          <div class="tags"><span>Flutter</span><span>Firebase</span></div>
+          <img class="thumb" src="public/img/proyectos/himnario.jpg" alt="Himnario GYD">
+        </article>
+
+        <article class="card hover-glow tilt neon-border" data-tags="ml">
+          <h3>Analítica de Ventas (Python + ML)</h3>
+          <p>Predicción de clientes (contado vs financiado) con EDA y comparación de modelos.</p>
+          <div class="tags"><span>Python</span><span>Pandas</span><span>Scikit-learn</span></div>
+          <img class="thumb" src="public/img/proyectos/analitica.jpg" alt="Analítica de Ventas">
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <button id="toTop" aria-label="Volver arriba">↑</button>
+  <footer class="footer">© <span id="year"></span> Maicol Nelson Rafael Rojas</footer>
+
+</body>
+</html>

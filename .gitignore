@@ -1,0 +1,51 @@
+# ========================================
+# .gitignore para mi-portafolio-neo
+# Evita subir dependencias, builds y archivos temporales
+# ========================================
+
+# Dependencias
+node_modules/
+
+# Build de producción
+dist/
+
+# Archivos temporales de Vite
+.vite/
+*.temp
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Configuración local de VSCode/IDE
+.vscode/
+.idea/
+*.swp
+
+# Archivos TypeScript compilados
+*.tsbuildinfo
+
+# Cache de npm
+.npm/
+
+# Archivos de coverage/tests
+coverage/
+*.lcov
+
+# Archivos de entorno (ejemplo si agregas APIs privadas)
+.env
+.env.local
+.env.*.local
+
+node_modules/
+dist/
+.vscode/
+.env
+*.log
+.DS_Store
