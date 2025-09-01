@@ -1,0 +1,70 @@
+/* ============================
+   Tokens de diseño (Dark / Light)
+   ============================ */
+
+/* Tema por defecto: DARK */
+:root{
+  /* Colores base */
+  --bg:        #0b1220;   /* fondo */
+  --panel:     #0f172a;   /* tarjetas/nav */
+  --panel2:    #0b1220;
+  --text:      #e5e7eb;   /* texto principal */
+  --muted:     #94a3b8;   /* texto secundario */
+  --line:      #1f2937;   /* bordes sutiles */
+
+  /* Marca / acentos (neón cian) */
+  --brand:     #22d3ee;
+  --brand2:    #38bdf8;
+  --ring:      #22d3ee33; /* glow translúcido */
+
+  /* Sombra y radios */
+  --shadow:    0 16px 40px -26px rgba(0,0,0,.65);
+  --radius:    18px;
+
+  /* Tipografía */
+  --font:      Inter, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, sans-serif;
+
+  /* Velocidades de animación */
+  --fast:      120ms;
+  --normal:    220ms;
+  --slow:      480ms;
+
+  /* Gradientes */
+  --grad-brand: linear-gradient(180deg, var(--brand2), var(--brand));
+  --grad-panel: linear-gradient(180deg, var(--panel), var(--panel2));
+}
+
+/* Tema LIGHT (se activa con: documentElement.dataset.theme = 'light') */
+:root[data-theme="light"]{
+  --bg:        #f6f8fb;
+  --panel:     #ffffff;
+  --panel2:    #f8fafc;
+  --text:      #0f172a;
+  --muted:     #475569;
+  --line:      #e2e8f0;
+
+  --brand:     #0891b2;
+  --brand2:    #06b6d4;
+  --ring:      #06b6d433;
+
+  --shadow:    0 16px 40px -26px rgba(2,132,199,.25);
+}
+
+/* Utilidades de color */
+.u-brand   { color: var(--brand); }
+.u-muted   { color: var(--muted); }
+.u-invert  { filter: invert(1); }
+
+/* Z-index tokens (referencia) */
+:root{
+  --z-nav: 50;
+  --z-modal: 60;
+  --z-canvas: -1;
+}
+
+/* Breakpoints como CSS variables (por si los usas en clamp) */
+:root{
+  --bp-sm: 520px;
+  --bp-md: 920px;
+  --bp-lg: 1240px;
+}

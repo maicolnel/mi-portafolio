@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sobre mí — Maicol Rafael</title>
+  <meta name="description" content="Sobre Maicol Nelson Rafael Rojas: estudiante de Ingeniería de Sistemas, desarrollo de software, redes y analítica.">
+  <link rel="icon" href="src\public\assets\icons\icon-192.png" />
+  <link rel="stylesheet" href="/src/scss/style.scss">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="scrollbar"></div>
+
+  <header class="nav">
+    <a class="brand magnet" href="index.html">Maicol Rafael</a>
+    <nav class="menu">
+      <a href="projects.html">Proyectos</a>
+      <a class="active" href="about.html">Sobre mí</a>
+      <a href="contact.html">Contacto</a>
+      <a class="btn magnet" href="src\public\assets\CV_Maicol_Rafael.pdf" download>Descargar CV</a>
+    </nav>
+    <div class="nav-actions">
+      <button id="themeToggle" class="btn-ghost magnet">🌓</button>
+      <button id="openChat" class="btn-ghost magnet">Asistente</button>
+    </div>
+  </header>
+
+  <main data-router>
+    <section class="section narrow fade-in-up">
+      <h1 class="section-title">Sobre mí</h1>
+
+      <div class="card neon-border">
+        <p>
+          Soy <b>Maicol Nelson Rafael Rojas</b>, estudiante de <b>Ingeniería de Sistemas (8vo ciclo)</b> en la USS.
+          Me especializo en <b>desarrollo de software</b> (Java, Flutter), <b>bases de datos</b> (PostgreSQL) y <b>redes</b> (VLANs, Wi-Fi 6).
+          Me motiva construir soluciones simples que generan impacto real para negocios y personas.
+        </p>
+      </div>
+
+      <div class="card neon-border" style="margin-top:14px">
+        <h3>Lo que estoy buscando</h3>
+        <p>
+          Oportunidades <b>remotas</b> de <b>soporte técnico / atención al cliente</b>, <b>desarrollo junior</b> o <b>data entry</b>,
+          donde pueda aportar disciplina, rapidez de aprendizaje y trato claro con usuarios.
+        </p>
+      </div>
+
+      <div class="card neon-border" style="margin-top:14px; position:relative">
+        <h3>Hitos y proyectos</h3>
+        <ul class="bullets" style="margin-top:8px">
+          <li><b>Artesanos de Pimentel</b>: plataforma multivendedor (WooCommerce + Dokan) con pagos QR y registro personalizado.</li>
+          <li><b>Sistema documentario</b> (Java + PostgreSQL): gestión de usuarios, roles, gerencias y estados; preview de PDFs.</li>
+          <li><b>Himnario GYD</b> (Flutter + Firebase): 424 himnos con búsqueda y audio.</li>
+          <li><b>Analítica de ventas</b> (Python + ML): predicción de clientes contado/financiado con EDA y modelos.</li>
+          <li><b>Tutor par</b> en la universidad (apoyo entre pares, lógica y algoritmos).</li>
+        </ul>
+        <div class="orbit float-y" style="position:absolute; right:-6px; bottom:-6px">
+          <div class="dot"></div>
+        </div>
+      </div>
+
+      <div class="card neon-border" style="margin-top:14px">
+        <h3>Habilidades técnicas</h3>
+        <ul class="bullets" style="margin-top:8px">
+          <li><b>Lenguajes:</b> Java, Python, SQL, TypeScript/JavaScript</li>
+          <li><b>Frameworks/Entornos:</b> Flutter, WordPress, (Next.js básico)</li>
+          <li><b>Bases de datos:</b> PostgreSQL, MySQL</li>
+          <li><b>Redes:</b> VLANs, Wi-Fi 6, Cisco · Soporte técnico</li>
+          <li><b>Herramientas:</b> Git/GitHub, Power BI, Docker (básico)</li>
+        </ul>
+      </div>
+
+      <div class="card neon-border" style="margin-top:14px">
+        <h3>Habilidades blandas</h3>
+        <ul class="bullets" style="margin-top:8px">
+          <li>Comunicación clara con usuarios y equipos</li>
+          <li>Aprendizaje rápido y resolución de problemas</li>
+          <li>Responsabilidad, puntualidad y ética</li>
+          <li>Trabajo colaborativo y atención al detalle</li>
+        </ul>
+
+        <div class="cta" style="margin-top:14px">
+          <a class="btn magnet" href="projects.html">Ver proyectos</a>
+          <a class="btn-ghost magnet" href="mailto:maicolnelsonrafaelrojas@gmail.com">Contactar</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button id="toTop" aria-label="Volver arriba">↑</button>
+  <footer class="footer">© <span id="year"></span> Maicol Nelson Rafael Rojas</footer>
+
+  <script type="module" src="/src/ts/ui/theme.ts"></script>
+  <script type="module" src="/src/ts/ui/router.ts"></script>
+  <script type="module" src="/src/ts/chat.ts"></script>
+  <script type="module" src="/src/ts/effects.ts"></script>
+  <script type="module" src="/src/ts/main.ts"></script>
+</body>
+</html>

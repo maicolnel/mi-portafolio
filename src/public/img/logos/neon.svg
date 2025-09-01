@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="200" y2="200">
+      <stop offset="0" stop-color="#67E8F9"/><stop offset="1" stop-color="#06B6D4"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="200" height="200" rx="26" fill="#0A0A12"/>
+  <g transform="translate(100,100)">
+    <polygon points="0,-52 45,-26 45,26 0,52 -45,26 -45,-26"
+             fill="#0F172A" stroke="url(#g1)" stroke-width="2.5" filter="url(#glow)"/>
+    <!-- Patillas simples -->
+    <g stroke="url(#g1)" stroke-width="2" opacity="0.9" filter="url(#glow)">
+      <line x1="-45" y1="-14" x2="-72" y2="-14"/><line x1="-45" y1="0" x2="-72" y2="0"/><line x1="-45" y1="14" x2="-72" y2="14"/>
+      <line x1="45" y1="-14" x2="72" y2="-14"/><line x1="45" y1="0" x2="72" y2="0"/><line x1="45" y1="14" x2="72" y2="14"/>
+    </g>
+    <!-- MR centrado -->
+    <text x="0" y="14" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="44"
+          text-anchor="middle" fill="url(#g1)" filter="url(#glow)">MR</text>
+  </g>
+</svg>

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Maicol Rafael — Portafolio Futurista</title>
+  <meta name="description" content="Portafolio de Maicol Nelson Rafael Rojas: desarrollo de software, redes y analítica de datos. Disponible para trabajo remoto.">
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="src\public\assets\icons\icon-192.png" />
+  <link rel="stylesheet" href="/src/scss/style.scss">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta property="og:title" content="Maicol Rafael — Portafolio" />
+  <meta property="og:description" content="Desarrollo de software, redes y analítica. Disponible para trabajo remoto." />
+  <meta property="og:type" content="website" />
+</head>
+<body>
+  <!-- Barra de progreso de scroll (opcional) -->
+  <div class="scrollbar"></div>
+
+  <!-- CANVAS 3D de fondo -->
+
+  <!-- NAV -->
+  <header class="nav">
+    <a class="brand magnet" href="index.html">Maicol Rafael</a>   
+    <nav class="menu" id="menu">
+      <a href="projects.html">Proyectos</a>
+      <a href="about.html">Sobre mí</a>
+      <a href="contact.html">Contacto</a>
+      <a class="btn magnet" href="src\public\assets\CV_Maicol_Rafael.pdf" download>Descargar CV</a>
+    </nav>
+    <div class="nav-actions">
+      <button id="themeToggle" class="btn-ghost magnet" aria-label="Cambiar tema">🌓</button>
+      <button id="openChat" class="btn-ghost magnet">Asistente</button>
+    </div>
+  </header>
+
+  <!-- CONTENIDO (router SPA-lite) -->
+  <main data-router>
+    <!-- HERO -->
+    <section class="hero fade-in-up">
+      <div class="hero-text">
+        <span class="badge">Disponible · Trabajo remoto</span>
+        <h1 id="typing">Desarrollo de software, redes y analítica de datos</h1>
+        <div id="lottieSpark" class="float-y" style="width:140px;height:140px;margin:6px 0"></div>
+
+        <p>Soy <b>Maicol Nelson Rafael Rojas</b> (8vo ciclo de Ingeniería de Sistemas). Desarrollo apps con <b>Java</b> y <b>Flutter</b>, gestiono bases de datos <b>PostgreSQL</b> y realizo despliegues web. Experiencia en <b>redes</b> (VLANs, Wi-Fi 6) y soporte técnico.</p>
+
+        <div class="cta">
+          <a class="btn magnet" href="projects.html">Ver proyectos</a>
+          <a class="btn-ghost magnet" href="mailto:maicolnelsonrafaelrojas@gmail.com">Contactar</a>
+        </div>
+
+        <div class="chips">
+          <span class="chip">Chiclayo, Lambayeque – Perú</span>
+          <span class="chip">+51 935 579 146</span>
+          <span class="chip">maicolnelsonrafaelrojas@gmail.com</span>
+        </div>
+
+        <div class="social">
+              <a class="ico magnet" href="https://wa.me/51935579146" target="_blank" aria-label="WhatsApp"><img src="src\public\social\whatsapp.svg" alt=""></a>
+          <a class="ico magnet" href="https://instagram.com/" target="_blank" aria-label="Instagram"><img src="src\public\social\instagram.svg" alt=""></a>
+          <a class="ico magnet" href="https://facebook.com/" target="_blank" aria-label="Facebook"><img src="src\public\social\facebook.svg" alt=""></a>
+          <a class="ico magnet" href="https://www.linkedin.com/in/maicol-nelson-rafael-rojas-82474b380" target="_blank" aria-label="LinkedIn"><img src="src\public\social\linkedin.svg" alt=""></a>
+          <a class="ico magnet" href="https://github.com/maicolnel" target="_blank" aria-label="GitHub"><img src="src\public\social\github.svg" alt=""></a>
+        </div>
+      </div>
+
+      <div class="hero-photo float-y">
+        <div class="photo-frame neon-border">
+          <img src="public/img/profile.jpg" alt="Foto de Maicol" />
+        </div>
+      </div>
+    </section>
+
+    <!-- PROYECTOS DESTACADOS -->
+    <section class="section">
+      <h2 class="section-title">Proyectos destacados</h2>
+      <div class="grid">
+        <article class="card hover-glow tilt neon-border">
+          <div class="card-head">
+            <h3>Artesanos de Pimentel</h3>
+            <a class="link magnet" href="https://www.artesanosdepimentel.com" target="_blank">Visitar ↗</a>
+          </div>
+          <p>Plataforma multivendedor con <b>WooCommerce + Dokan</b>, pagos QR (Yape) y registro personalizado.</p>
+          <div class="tags"><span>WordPress</span><span>WooCommerce</span><span>Dokan</span></div>
+        </article>
+
+        <article class="card hover-glow tilt neon-border">
+          <h3>Sistema Documentario (Java + PostgreSQL)</h3>
+          <p>Gestión de documentos con roles, gerencias y estados. Almacenamiento y previsualización de PDFs.</p>
+          <div class="tags"><span>Java</span><span>PostgreSQL</span><span>Swing</span></div>
+        </article>
+
+        <article class="card hover-glow tilt neon-border">
+          <h3>Himnario GYD (Flutter + Firebase)</h3>
+          <p>App con 424 himnos, búsqueda por número/título y audio integrado desde Firebase.</p>
+          <div class="tags"><span>Flutter</span><span>Firebase</span></div>
+        </article>
+      </div>
+      <div class="center mt-20">
+        <a class="btn magnet" href="projects.html">Ver todos los proyectos</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODAL CHAT -->
+  <div id="chatModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="chatTitle">
+    <div class="modal-content">
+      <button id="closeChat" class="modal-close" aria-label="Cerrar">×</button>
+      <h3 id="chatTitle">Asistente</h3>
+      <div id="chatBody" class="chat-body">
+        <div class="msg bot">Hola 👋 ¿En qué te ayudo? (Ej: “Quiero tu CV”, “Cotización”, “Entrevista”)</div>
+      </div>
+      <form id="chatForm" class="chat-form" autocomplete="off">
+        <input id="chatInput" type="text" placeholder="Escribe tu mensaje…" />
+        <button class="btn" type="submit">Enviar</button>
+      </form>
+      <p class="chat-note">*Demo local sin backend. Para respuesta real, escríbeme a <a href="mailto:maicolnelsonrafaelrojas@gmail.com">mi correo</a>.</p>
+    </div>
+  </div>
+
+  <!-- Botón volver arriba -->
+  <button id="toTop" aria-label="Volver arriba">↑</button>
+
+  <footer class="footer">© <span id="year"></span> Maicol Nelson Rafael Rojas · Hecho con TS + SCSS + WebGL</footer>
+
+  <!-- SCRIPTS -->
+  <script type="module" src="/src/ts/ui/theme.ts"></script>
+  <script type="module" src="/src/ts/ui/router.ts"></script>
+  <script type="module" src="/src/ts/chat.ts"></script>
+  <script type="module" src="/src/ts/effects.ts"></script>
+  <script type="module" src="/src/ts/three/heroParticles.ts"></script>
+  <script type="module" src="/src/ts/main.ts"></script>
+</body>
+</html>

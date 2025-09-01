@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contacto — Maicol Rafael</title>
+  <meta name="description" content="Contacto de Maicol Nelson Rafael Rojas. Disponible para trabajo remoto: soporte al cliente, data entry, desarrollo junior.">
+  <link rel="icon" href="src\public\assets\icons\icon-192.png" />
+  <link rel="stylesheet" href="/src/scss/style.scss">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="scrollbar"></div>
+
+  <header class="nav">
+    <a class="brand magnet" href="index.html">Maicol Rafael</a>
+    <nav class="menu">
+      <a href="projects.html">Proyectos</a>
+      <a href="about.html">Sobre mí</a>
+      <a class="active" href="contact.html">Contacto</a>
+      <a class="btn magnet" href="src\public\assets\CV_Maicol_Rafael.pdf" download>Descargar CV</a>
+    </nav>
+    <div class="nav-actions">
+      <button id="themeToggle" class="btn-ghost magnet">🌓</button>
+      <button id="openChat" class="btn-ghost magnet">Asistente</button>
+    </div>
+  </header>
+
+  <main data-router>
+    <section class="section narrow fade-in-up">
+      <h1 class="section-title">Contacto</h1>
+      <p>¿Tienes una oportunidad remota o un proyecto? Respondo rápido.</p>
+
+      <div class="card neon-border" style="margin-top:14px">
+        <ul class="contact-list" style="margin-top:6px; line-height:1.9">
+          <li>📧 <a class="magnet" href="mailto:maicolnelsonrafaelrojas@gmail.com">maicolnelsonrafaelrojas@gmail.com</a></li>
+          <li>📱 <a class="magnet" href="https://wa.me/51935579146" target="_blank">+51 935 579 146</a></li>
+          <li>🔗 <a class="magnet" href="https://www.linkedin.com/in/maicol-nelson-rafael-rojas-82474b380" target="_blank">LinkedIn</a></li>
+          <li>💻 <a class="magnet" href="https://github.com/maicolnel" target="_blank">GitHub</a></li>
+        </ul>
+
+        <div class="social" style="margin-top:10px">
+          <a class="ico magnet" href="https://wa.me/51935579146" target="_blank" aria-label="WhatsApp"><img src="src\public\social\whatsapp.svg" alt=""></a>
+          <a class="ico magnet" href="https://instagram.com/" target="_blank" aria-label="Instagram"><img src="src\public\social\instagram.svg" alt=""></a>
+          <a class="ico magnet" href="https://facebook.com/" target="_blank" aria-label="Facebook"><img src="src\public\social\facebook.svg" alt=""></a>
+          <a class="ico magnet" href="https://www.linkedin.com/in/maicol-nelson-rafael-rojas-82474b380" target="_blank" aria-label="LinkedIn"><img src="src\public\social\linkedin.svg" alt=""></a>
+          <a class="ico magnet" href="https://github.com/maicolnel" target="_blank" aria-label="GitHub"><img src="src\public\social\github.svg" alt=""></a>
+        </div>
+      </div>
+
+      <div class="card neon-border" style="margin-top:14px">
+        <form class="contact-form" id="contactForm">
+          <div style="display:grid;gap:10px">
+            <input id="nombre" type="text" placeholder="Tu nombre" required>
+            <input id="correo" type="email" placeholder="Tu correo" required>
+            <textarea id="msg" rows="6" placeholder="Cuéntame brevemente tu necesidad…" required></textarea>
+          </div>
+          <div class="cta" style="margin-top:12px">
+            <button class="btn magnet" type="submit">Enviar por correo</button>
+            <a class="btn-ghost magnet" href="public/assets/CV_Maicol_Rafael.pdf" download>Descargar CV</a>
+          </div>
+        </form>
+
+        <p class="chat-note" style="margin-top:10px">
+          ¿Prefieres WhatsApp? Escríbeme a <a class="magnet" href="https://wa.me/51935579146" target="_blank">+51 935 579 146</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <button id="toTop" aria-label="Volver arriba">↑</button>
+  <footer class="footer">© <span id="year"></span> Maicol Nelson Rafael Rojas</footer>
+
+  <!-- JS puro para el mailto; lo demás va en módulos -->
+  <script>
+    const form = document.getElementById('contactForm');
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const nombreEl = document.getElementById('nombre');
+      const correoEl = document.getElementById('correo');
+      const msgEl    = document.getElementById('msg');
+
+      const nombre = nombreEl && 'value' in nombreEl ? String(nombreEl.value).trim() : '';
+      const correo = correoEl && 'value' in correoEl ? String(correoEl.value).trim() : '';
+      const msg    = msgEl && 'value' in msgEl ? String(msgEl.value).trim() : '';
+
+      const asunto = encodeURIComponent(`Contacto desde la web — ${nombre}`);
+      const cuerpo = encodeURIComponent(
+        `Hola Maicol,%0D%0A%0D%0A` +
+        `Soy ${nombre} (${correo}).%0D%0A` +
+        `Motivo:%0D%0A${msg}%0D%0A%0D%0A` +
+        `Gracias.`
+      );
+      location.href = `mailto:maicolnelsonrafaelrojas@gmail.com?subject=${asunto}&body=${cuerpo}`;
+    });
+  </script>
+
+  <script type="module" src="/src/ts/ui/theme.ts"></script>
+  <script type="module" src="/src/ts/ui/router.ts"></script>
+  <script type="module" src="/src/ts/chat.ts"></script>
+  <script type="module" src="/src/ts/effects.ts"></script>
+  <script type="module" src="/src/ts/main.ts"></script>
+</body>
+</html>

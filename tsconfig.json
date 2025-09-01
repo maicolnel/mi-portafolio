@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "allowJs": false,
+    "types": [],
+    "baseUrl": ".",
+    "paths": {
+      "@ts/*": ["src/ts/*"],
+      "@scss/*": ["src/scss/*"]
+    }
+  },
+  "include": ["src/**/*.ts"]
+}

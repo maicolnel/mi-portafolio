@@ -1,0 +1,145 @@
+/* ============================
+   ANIMACIONES / MICRO-UX
+   ============================ */
+
+/* ---- Aparición suave (ya usada por .fade-in-up en style.scss) ---- */
+.reveal { opacity: 0; transform: translateY(14px); }
+.reveal.is-visible { opacity: 1; transform: translateY(0); transition: .6s ease; }
+
+/* ---- Cursor / elementos magnéticos (acompaña al JS) ---- */
+.magnet {
+  transition: transform 160ms ease, filter 160ms ease;
+  will-change: transform;
+}
+
+/* ---- Glow de foco accesible ---- */
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 6px var(--ring);
+}
+
+/* ---- Badges con shimmer sutil ---- */
+.badge {
+  position: relative;
+  overflow: hidden;
+}
+.badge::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 0%, #ffffff22 50%, transparent 100%);
+  transform: translateX(-120%);
+  animation: shimmer 2.2s ease-in-out infinite;
+}
+@keyframes shimmer {
+  0% { transform: translateX(-120%); }
+  60% { transform: translateX(120%); }
+  100% { transform: translateX(120%); }
+}
+
+/* ---- Caret para el título con typing (index) ---- */
+#typing { position: relative; }
+#typing::after {
+  content: "▍";
+  margin-left: .14rem;
+  color: var(--brand2);
+  animation: blink .9s steps(1) infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+/* ---- Flotación sutil (aplícalo a imágenes o íconos) ---- */
+.float-y { animation: floatY 6s ease-in-out infinite; }
+@keyframes floatY {
+  0%,100% { transform: translateY(0) }
+  50%     { transform: translateY(-8px) }
+}
+
+/* ---- Borde neón animado para destacar tarjetas ---- */
+.neon-border {
+  position: relative;
+  border-radius: var(--radius);
+  isolation: isolate;
+}
+.neon-border::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  background: conic-gradient(from 180deg, var(--brand), var(--brand2), #7dd3fc, var(--brand));
+  filter: blur(12px);
+  opacity: .35;
+  animation: spin 12s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ---- Órbitas decorativas (coloca .orbit dentro de contenedores) ---- */
+.orbit {
+  --size: 180px;
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  border: 1px dashed var(--line);
+  animation: rotate 18s linear infinite;
+}
+.orbit .dot {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 8px; height: 8px;
+  margin: -4px 0 0 -4px;
+  border-radius: 50%;
+  background: var(--brand2);
+  box-shadow: 0 0 12px var(--ring);
+  transform-origin: -80px 0;
+  animation: rotate 6s linear infinite reverse;
+}
+@keyframes rotate { to { transform: rotate(360deg); } }
+
+/* ---- Modal: entrada / salida ---- */
+.modal { animation: fadeBg .18s ease; }
+.modal.hidden { animation: none; }
+.modal-content {
+  animation: popIn .22s ease;
+}
+@keyframes fadeBg { from { background: #0000 } to { background: #0008 } }
+@keyframes popIn   { from { transform: translateY(6px) scale(.98); opacity: .6 }
+                     to   { transform: translateY(0) scale(1);    opacity: 1 } }
+
+/* ---- Loader puntos pulso (útil para chatbot) ---- */
+.dot-pulse {
+  display: inline-block;
+  width: 52px; text-align: center;
+}
+.dot-pulse span {
+  display: inline-block;
+  width: 8px; height: 8px; margin: 0 2px;
+  background: var(--brand2);
+  border-radius: 50%;
+  animation: pulse 1s infinite ease-in-out;
+}
+.dot-pulse span:nth-child(2){ animation-delay: .12s }
+.dot-pulse span:nth-child(3){ animation-delay: .24s }
+@keyframes pulse {
+  0%, 80%, 100% { transform: scale(0.6); opacity: .5 }
+  40%          { transform: scale(1);   opacity: 1 }
+}
+
+/* ---- Skeleton para imágenes/miniaturas mientras cargan ---- */
+.skeleton {
+  background: linear-gradient(90deg, #0000, #ffffff12, #0000);
+  background-size: 200% 100%;
+  animation: skeleton 1.4s ease-in-out infinite;
+}
+@keyframes skeleton { to { background-position: -200% 0 } }
+
+/* ---- Scroll indicator fino (opcional: añade <div class="scrollbar"></div> fijo arriba) ---- */
+.scrollbar {
+  position: fixed; left: 0; top: 0; height: 3px; width: 0;
+  background: var(--grad-brand);
+  z-index: 9999;
+  box-shadow: 0 0 10px var(--ring);
+}
